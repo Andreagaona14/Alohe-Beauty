@@ -1,4 +1,4 @@
-let totalPrice = 0; // Variable para almacenar el precio total
+let totalPrice = 0; 
 
 export function updatePriceTotalCarShop() {
   const pTotalPrice = document.getElementById('total-price');
@@ -6,6 +6,11 @@ export function updatePriceTotalCarShop() {
 }
 
 export function addToTotal(price) {
-  totalPrice += price; // Suma el precio al total
-  updatePriceTotalCarShop(); // Actualiza el total en el DOM
+  totalPrice += price; 
+  updatePriceTotalCarShop(); 
+}
+
+export function resetTotal() {
+  totalPrice = 0;
+  updatePriceTotalCarShop()
 }

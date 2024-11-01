@@ -1,29 +1,34 @@
+
+import { addStock } from "./addStock.js";
 import { product } from "./products.js";
+import { subtractStock } from "./subtractStock.js";
+import { updatePrice } from "./updatePrice.js";
+import { addToTotal } from "./updatePriceTotalCarShop.js";
 
 export function addToCardShop(id) {
-  const productItem = product.find(item => item.id === id);
-  
+  const productItem = product.find((item) => item.id === id);
+
   if (!productItem) {
     console.error("Producto no encontrado");
     return;
   }
 
   const blockProductCarShop = document.querySelector(".block-product-car-shop");
-
-  const existingProductCarShop = [...blockProductCarShop.children].find(item => {
-    return item.querySelector(".title-product-information").textContent === productItem.title;
-  });
+  const existingProductCarShop = [...blockProductCarShop.children].find(
+    (item) => item.querySelector(".title-product-information").textContent === productItem.title
+  );
 
   if (existingProductCarShop) {
     const quantityElement = existingProductCarShop.querySelector(".quantity-product-car-shop");
     const currentQuantity = parseInt(quantityElement.textContent);
-    
-    // Increment the quantity
+
+    // Incrementa la cantidad
     quantityElement.textContent = currentQuantity + 1;
 
-    // Decrement stock when updating quantity
+    // Decrementa el stock y actualiza el total
     if (productItem.stock > 0) {
       productItem.stock -= 1;
+      addToTotal(productItem.price); // Actualiza el total
       updatePrice(existingProductCarShop, productItem.price, currentQuantity + 1);
     } else {
       alert("No hay más stock para añadir.");
@@ -59,125 +64,30 @@ export function addToCardShop(id) {
     const btnAdd = document.createElement("img");
     btnAdd.src = "Img/mas.svg";
     btnAdd.alt = "sumar";
-    btnAdd.onclick = () => sumarSock(productItem.id);
+    btnAdd.onclick = () => addStock(productItem.id);
 
     const quantity = document.createElement("p");
     quantity.className = "quantity-product-car-shop";
-    quantity.textContent = "1"; // Start quantity at 1
+    quantity.textContent = "1"; // Empieza la cantidad en 1
 
     const btnSubtract = document.createElement("img");
     btnSubtract.src = "Img/menos.svg";
     btnSubtract.alt = "restar";
-    btnSubtract.onclick = () => restarSock(productItem.id);
+    btnSubtract.onclick = () => subtractStock(productItem.id);
 
     informationProduct.appendChild(titleProduct);
     informationProduct.appendChild(priceProduct);
     actionProduct.appendChild(btnAdd);
     actionProduct.appendChild(quantity);
     actionProduct.appendChild(btnSubtract);
-    
+
     productCarShop.appendChild(imgProduct);
     productCarShop.appendChild(informationProduct);
     productCarShop.appendChild(actionProduct);
-
     blockProductCarShop.appendChild(productCarShop);
-    
-    // Decrement stock when adding a new product
+
+    // Decrementa el stock y actualiza el total
     productItem.stock -= 1;
+    addToTotal(productItem.price); // Actualiza el total
   }
-}
-
-function sumarSock(id) {
-  const productItem = product.find(item => item.id === id);
-  
-  if (!productItem) {
-    console.error("Producto no encontrado");
-    return;
-  }
-
-  const blockProductCarShop = document.querySelector(".block-product-car-shop");
-  const existingProductCarShop = [...blockProductCarShop.children].find(item => {
-    return item.querySelector(".title-product-information").textContent === productItem.title;
-  });
-
-  if (existingProductCarShop) {
-    const quantityElement = existingProductCarShop.querySelector(".quantity-product-car-shop");
-    const currentQuantity = parseInt(quantityElement.textContent);
-    
-    if (productItem.stock > 0) {
-      // Increment the quantity
-      quantityElement.textContent = currentQuantity + 1;
-      productItem.stock -= 1; // Decrement stock
-      updatePrice(existingProductCarShop, productItem.price, currentQuantity + 1);
-
-      // Update the stock in the product card
-      updateProductCardStock(productItem);
-    } else {
-      alert("No hay más stock para añadir.");
-    }
-  } else {
-    console.error("El producto no se encuentra en el carrito");
-  }
-}
-
-
-function restarSock(id) {
-  const productItem = product.find(item => item.id === id);
-  
-  if (!productItem) {
-    console.error("Producto no encontrado");
-    return;
-  }
-
-  const blockProductCarShop = document.querySelector(".block-product-car-shop");
-  const existingProductCarShop = [...blockProductCarShop.children].find(item => {
-    return item.querySelector(".title-product-information").textContent === productItem.title;
-  });
-
-  if (existingProductCarShop) {
-    const quantityElement = existingProductCarShop.querySelector(".quantity-product-car-shop");
-    const currentQuantity = parseInt(quantityElement.textContent);
-    
-    if (currentQuantity > 1) {
-      // Decrement the quantity
-      quantityElement.textContent = currentQuantity - 1;
-      productItem.stock += 1; // Increment stock
-      updatePrice(existingProductCarShop, productItem.price, currentQuantity - 1);
-      
-      // Update the stock in the product card
-      updateProductCardStock(productItem);
-    } else {
-      // Remove product from cart if quantity is 1
-      existingProductCarShop.remove();
-      productItem.stock += 1; // Return stock since we're removing the product
-      updateProductCardStock(productItem);
-    }
-  } else {
-    console.error("El producto no se encuentra en el carrito");
-  }
-}
-
-function updateProductCardStock(productItem) {
-  const sectionProduct = document.getElementById("section-product");
-  const productCard = [...sectionProduct.children].find(card => {
-    return card.querySelector(".title-product").textContent === productItem.title;
-  });
-
-  if (productCard) {
-    const stockProduct = productCard.querySelector(".stock-product");
-    if (productItem.stock > 0) {
-      stockProduct.textContent = `Cantidad: ${productItem.stock}`;
-    } else {
-      stockProduct.textContent = "Sin stock"; // Update to show out of stock
-      const btnAddToCart = productCard.querySelector(".btn-add-to-car");
-      btnAddToCart.disabled = true; // Disable button if out of stock
-    }
-  }
-}
-
-
-function updatePrice(productElement, productPrice, quantity) {
-  const priceElement = productElement.querySelector(".price-product-information");
-  const totalPrice = productPrice * quantity;
-  priceElement.textContent = `$${totalPrice.toFixed(2)}`; // Update the total price in the card
 }

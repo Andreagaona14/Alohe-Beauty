@@ -26,7 +26,7 @@ header {
 }
 
 #car-shop {
-  position: absolute;
+  position: fixed;
   top: 60px;
   height: 400px;
   width: 300px;
@@ -37,6 +37,7 @@ header {
   border-radius: 8px;
   display: none;
   flex-direction: column;
+  z-index: 1;
 }
 
 #menu-car-shop {

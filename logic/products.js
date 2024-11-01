@@ -1,5 +1,6 @@
 export const product = [
   {
+    id: 1,
     img: "Img/productosCremas/crema 1.jpg",
     title: "Crema 1",
     price: 43900,
@@ -7,6 +8,7 @@ export const product = [
     description: "Crema hidratante ideal para todo tipo de piel.",
   },
   {
+    id: 2,
     img: "Img/productosCremas/crema nivea.webp",
     title: "Crema Nivea",
     price: 49000,
@@ -14,6 +16,7 @@ export const product = [
     description: "Nutre y suaviza la piel con su fórmula clásica.",
   },
   {
+    id: 3,
     img: "Img/productosCremas/dove 2.png",
     title: "Dove 2",
     price: 46000,
@@ -21,6 +24,7 @@ export const product = [
     description: "Crema rica en nutrientes para una piel radiante.",
   },
   {
+    id: 4,
     img: "Img/productosCremas/neutrogena.jpg",
     title: "Neutrogena",
     price: 67000,
@@ -28,6 +32,7 @@ export const product = [
     description: "Hidratación profunda para una piel saludable.",
   },
   {
+    id: 5,
     img: "Img/productosCremas/tododia.jpg",
     title: "Tododia",
     price: 39000,
@@ -35,6 +40,7 @@ export const product = [
     description: "Crema corporal con fragancia fresca y ligera.",
   },
   {
+    id: 6,
     img: "Img/productosCremas/vitu.webp",
     title: "Vitu",
     price: 72000,
@@ -42,6 +48,7 @@ export const product = [
     description: "Fórmula avanzada para el cuidado de la piel.",
   },
   {
+    id: 7,
     img: "Img/productosExfoliantes/exfoliante cafe.jpg",
     title: "Exfoliante Café",
     price: 33000,
@@ -49,6 +56,7 @@ export const product = [
     description: "Exfoliante natural que revitaliza la piel.",
   },
   {
+    id: 8,
     img: "Img/productosExfoliantes/exfoliante olivia.webp",
     title: "Exfoliante Olivia",
     price: 28000,
@@ -56,6 +64,7 @@ export const product = [
     description: "Suave exfoliación con ingredientes orgánicos.",
   },
   {
+    id: 9,
     img: "Img/productosExfoliantes/exfoliante.jpg",
     title: "Exfoliante",
     price: 32000,
@@ -63,6 +72,7 @@ export const product = [
     description: "Elimina las células muertas y renueva la piel.",
   },
   {
+    id: 10,
     img: "Img/productosExfoliantes/naturesse.webp",
     title: "Naturesse",
     price: 39000,
@@ -70,6 +80,7 @@ export const product = [
     description: "Exfoliante natural que hidrata y purifica.",
   },
   {
+    id: 11,
     img: "Img/productosExfoliantes/sephora.jpg",
     title: "Sephora",
     price: 65000,
@@ -77,6 +88,7 @@ export const product = [
     description: "Exfoliante premium para un acabado suave.",
   },
   {
+    id: 12,
     img: "Img/productosExfoliantes/watermelon.webp",
     title: "Watermelon",
     price: 43000,
@@ -84,6 +96,7 @@ export const product = [
     description: "Refrescante exfoliante de sandía para la piel.",
   },
   {
+    id: 13,
     img: "Img/productosLabios/colageno labios.png",
     title: "Colágeno Labios",
     price: 24000,
@@ -91,6 +104,7 @@ export const product = [
     description: "Bálsamo labial con colágeno para mayor hidratación.",
   },
   {
+    id: 14,
     img: "Img/productosLabios/colageno.jpg",
     title: "Colágeno",
     price: 26000,
@@ -98,6 +112,7 @@ export const product = [
     description: "Fórmula para labios más voluminosos y suaves.",
   },
   {
+    id: 15,
     img: "Img/productosLabios/exfoliante.jpeg",
     title: "Exfoliante Labios",
     price: 23000,
@@ -105,6 +120,7 @@ export const product = [
     description: "Suave exfoliación para unos labios sedosos.",
   },
   {
+    id: 16,
     img: "Img/productosLabios/gloss.jpg",
     title: "Gloss",
     price: 22000,
@@ -112,6 +128,7 @@ export const product = [
     description: "Brillo labial que hidrata y da volumen.",
   },
   {
+    id: 17,
     img: "Img/productosLabios/hidratante.jpg",
     title: "Hidratante Labios",
     price: 27000,
@@ -119,6 +136,7 @@ export const product = [
     description: "Hidratación intensa para labios secos.",
   },
   {
+    id: 18,
     img: "Img/productosLabios/serum.webp",
     title: "Serum Labios",
     price: 35000,
@@ -126,6 +144,7 @@ export const product = [
     description: "Serum nutritivo para labios más saludables.",
   },
   {
+    id: 19,
     img: "Img/productosLabios/voluminizante.webp",
     title: "Voluminizante Labios",
     price: 40000,
@@ -133,6 +152,7 @@ export const product = [
     description: "Aumenta el volumen y define los labios.",
   },
   {
+    id: 20,
     img: "Img/productosMascarillas/class gold.jpeg",
     title: "Class Gold",
     price: 45000,
@@ -140,6 +160,7 @@ export const product = [
     description: "Mascarilla de lujo que ilumina la piel.",
   },
   {
+    id: 21,
     img: "Img/productosMascarillas/gel2.jpg",
     title: "Gel 2",
     price: 30000,
@@ -147,6 +168,7 @@ export const product = [
     description: "Gel facial revitalizante y refrescante.",
   },
   {
+    id: 22,
     img: "Img/productosMascarillas/kit body care.png",
     title: "Kit Body Care",
     price: 80000,
@@ -154,6 +176,7 @@ export const product = [
     description: "Kit completo para el cuidado del cuerpo.",
   },
   {
+    id: 23,
     img: "Img/productosMascarillas/kit eva avo.webp",
     title: "Kit Eva Avo",
     price: 70000,
@@ -161,6 +184,7 @@ export const product = [
     description: "Mascarillas nutritivas con extracto de aguacate.",
   },
   {
+    id: 24,
     img: "Img/productosMascarillas/weleda 2.jpg",
     title: "Weleda 2",
     price: 56000,
@@ -168,6 +192,7 @@ export const product = [
     description: "Mascarilla natural para una piel radiante.",
   },
   {
+    id: 25,
     img: "Img/productosMascarillas/weleda.jpg",
     title: "Weleda",
     price: 58000,
@@ -175,6 +200,7 @@ export const product = [
     description: "Cuidado facial con ingredientes orgánicos.",
   },
   {
+    id: 26,
     img: "Img/productosOjos/colageno trendy.jpg",
     title: "Colágeno Trendy",
     price: 30000,
@@ -182,6 +208,7 @@ export const product = [
     description: "Tratamiento de colágeno para la zona de los ojos.",
   },
   {
+    id: 27,
     img: "Img/productosOjos/contorno ojos 2.webp",
     title: "Contorno Ojos 2",
     price: 35000,
@@ -189,6 +216,7 @@ export const product = [
     description: "Reduce las ojeras y la hinchazón en el contorno.",
   },
   {
+    id: 28,
     img: "Img/productosOjos/desmaquillante.jpg",
     title: "Desmaquillante",
     price: 28000,
@@ -196,6 +224,7 @@ export const product = [
     description: "Elimina el maquillaje suavemente.",
   },
   {
+    id: 29,
     img: "Img/productosOjos/gel pestañas 2.webp",
     title: "Gel Pestañas 2",
     price: 45000,
@@ -203,6 +232,7 @@ export const product = [
     description: "Fortalece y define las pestañas.",
   },
   {
+    id: 30,
     img: "Img/productosOjos/kit pestañas.webp",
     title: "Kit Pestañas",
     price: 60000,
@@ -210,6 +240,7 @@ export const product = [
     description: "Todo lo necesario para unas pestañas perfectas.",
   },
   {
+    id: 31,
     img: "Img/productosOjos/voluminizador cejas.webp",
     title: "Voluminizador Cejas",
     price: 32000,
@@ -217,6 +248,7 @@ export const product = [
     description: "Define y da volumen a tus cejas.",
   },
   {
+    id: 32,
     img: "Img/productosRostro/agua micelar.jpg",
     title: "Agua Micelar",
     price: 29000,
@@ -224,6 +256,7 @@ export const product = [
     description: "Limpieza profunda y refrescante.",
   },
   {
+    id: 33,
     img: "Img/productosRostro/crema hidratante.jpg",
     title: "Crema Hidratante",
     price: 41000,
@@ -231,6 +264,7 @@ export const product = [
     description: "Hidratación prolongada para todo tipo de piel.",
   },
   {
+    id: 34,
     img: "Img/productosRostro/jabon barra.webp",
     title: "Jabón Barra",
     price: 22000,
@@ -238,6 +272,7 @@ export const product = [
     description: "Jabón suave que limpia sin resecar.",
   },
   {
+    id: 35,
     img: "Img/productosRostro/kit ana maria.webp",
     title: "Kit Ana María",
     price: 75000,
@@ -245,6 +280,7 @@ export const product = [
     description: "Kit completo para el cuidado facial.",
   },
   {
+    id: 36,
     img: "Img/productosRostro/mascarilla.webp",
     title: "Mascarilla",
     price: 34000,
@@ -252,6 +288,7 @@ export const product = [
     description: "Mascarilla hidratante que rejuvenece la piel.",
   },
   {
+    id: 37,
     img: "Img/productosRostro/serum antimanchas.jpg",
     title: "Serum Antimanchas",
     price: 36000,
